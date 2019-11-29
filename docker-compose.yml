@@ -1,0 +1,15 @@
+version: "3"
+services:
+  rest-api:
+    build: 
+      context: .
+      dockerfile: Back-end/Dockerfile
+    ports:
+      - "8082:8082"
+    image: rest-api:rest-api
+
+  front-end:
+    build: 
+      context: .
+      dockerfile: Front-end/Dockerfile
+    image: front-end:front-end
